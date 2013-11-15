@@ -1,12 +1,14 @@
-
 #include <iostream>
 #include <vector>
 using namespace std;
 typedef vector<int> vi;
 
-int merge_and_count(const vi& A , const vi& B, vi &C );
+int
+merge_and_count(const vi& A , const vi& B, vi &C );
 
-int count_inversions(vi input){
+int
+count_inversions(vi input)
+{
     if(input.size() == 0 || input.size() == 1 )return 0;
 
     int  mid = input.size()/2;
@@ -18,7 +20,10 @@ int count_inversions(vi input){
     count_inversions(right) +
     merge_and_count(left,right,result));
 }
-int merge_and_count(const vi& A , const vi& B, vi &C ){
+
+int 
+merge_and_count(const vi& A , const vi& B, vi &C )
+{
     size_t k =0 ;
     size_t i =0 , j=0 ; 
     int num_inversions = 0;
@@ -39,7 +44,9 @@ int merge_and_count(const vi& A , const vi& B, vi &C ){
     
   return num_inversions;
 }
-int main(int argc , char* argv[]){
+
+int
+main(int argc , char* argv[]){
 
     vi input;
     printf("%d",input.size());
